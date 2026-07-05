@@ -1,0 +1,484 @@
+/* --- Root variables based on your theme color palette --- */
+:root {
+    --primary-color: #1a62ff;
+    --primary-hover: #004ae6;
+    --bg-light: #f8faff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --white: #ffffff;
+    --shadow-soft: 0 10px 30px rgba(26, 98, 255, 0.05);
+    --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.03);
+    --border-radius: 12px;
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- Base Resets --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-main);
+    background-color: var(--white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* --- Layout Utility Classes --- */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.grid {
+    display: grid;
+    gap: 32px;
+}
+
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.alignment-center { align-items: center; }
+
+/* --- Section Styling Typography --- */
+section {
+    padding: 100px 0;
+}
+
+.section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px auto;
+}
+
+.section-header h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 16px;
+}
+
+.section-header p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background-color: #e6eefb;
+    color: var(--primary-color);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+}
+
+/* --- Buttons --- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 28px;
+    font-weight: 600;
+    border-radius: var(--border-radius);
+    transition: var(--transition-smooth);
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    font-size: 0.95rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+    box-shadow: 0 4px 14px rgba(26, 98, 255, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.btn-light {
+    background-color: var(--white);
+    color: var(--primary-color);
+}
+
+.btn-light:hover {
+    background-color: #f1f5f9;
+}
+
+.btn-whatsapp-cta {
+    background-color: #25d366;
+    color: var(--white);
+}
+
+.btn-whatsapp-cta:hover {
+    background-color: #20ba5a;
+}
+
+.btn-block { width: 100%; }
+
+/* --- Header & Navigation --- */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: var(--transition-smooth);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-main);
+    text-decoration: none;
+}
+
+.logo-accent { color: var(--primary-color); }
+
+.nav-menu {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    transition: var(--transition-smooth);
+    position: relative;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-color);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 24px;
+    height: 2px;
+    background-color: var(--text-main);
+    transition: var(--transition-smooth);
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    background: linear-gradient(135deg, #f4f7ff 0%, #ffffff 100%);
+    padding: 180px 0 120px 0;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    color: var(--text-main);
+}
+
+.text-gradient {
+    color: var(--primary-color);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 750px;
+    margin: 0 auto 40px auto;
+}
+
+.hero-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero-phones {
+    display: flex;
+    gap: 24px;
+}
+
+.phone-link {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition-smooth);
+}
+
+.phone-link:hover { color: var(--primary-color); }
+
+/* --- Premium Cards (Why Choose Us & Services) --- */
+.why-choose-us { background-color: var(--bg-light); }
+
+.feature-card, .service-card {
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    box-shadow: var(--shadow-card);
+    transition: var(--transition-smooth);
+}
+
+.feature-card:hover, .service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-soft);
+}
+
+.icon-box {
+    width: 60px;
+    height: 60px;
+    background-color: #e6eefb;
+    color: var(--primary-color);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+}
+
+.feature-card h3, .service-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.feature-card p, .service-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.service-list {
+    list-style: none;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.service-list li {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.service-list li i {
+    color: #22c55e;
+}
+
+/* --- Call To Action (CTA) --- */
+.cta-box {
+    background: linear-gradient(135deg, #1a62ff 0%, #004ae6 100%);
+    color: var(--white);
+    padding: 60px;
+    border-radius: var(--border-radius) * 2;
+    text-align: center;
+}
+
+.cta-box h2 { font-size: 2.5rem; margin-bottom: 16px; font-weight: 700; }
+.cta-box p { font-size: 1.1rem; max-width: 700px; margin: 0 auto 32px auto; opacity: 0.9; }
+.cta-buttons { display: flex; justify-content: center; gap: 20px; }
+
+/* --- About Section --- */
+.about-section { background-color: var(--white); }
+.about-lead { font-size: 1.2rem; font-weight: 500; color: var(--primary-color); margin: 16px 0; }
+.about-features { margin-top: 24px; }
+.about-f-item { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; font-weight: 500; }
+.about-f-item i { color: var(--primary-color); }
+.stat-card { background-color: var(--bg-light); padding: 40px; text-align: center; border-radius: var(--border-radius); }
+.stat-card h3 { font-size: 3rem; color: var(--primary-color); font-weight: 700; }
+
+/* --- Contact Section --- */
+.contact-section { background-color: var(--bg-light); }
+.contact-info { display: flex; flex-direction: column; gap: 24px; }
+.info-item { display: flex; gap: 20px; background: var(--white); padding: 24px; border-radius: var(--border-radius); box-shadow: var(--shadow-card); }
+.info-icon { font-size: 1.5rem; color: var(--primary-color); margin-top: 4px; }
+.info-item h4 { margin-bottom: 4px; }
+.info-item a { color: inherit; text-decoration: none; transition: var(--transition-smooth); }
+.info-item a:hover { color: var(--primary-color); }
+
+.contact-form-container { background: var(--white); padding: 40px; border-radius: var(--border-radius); box-shadow: var(--shadow-card); }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; font-weight: 500; margin-bottom: 8px; }
+.form-group input, .form-group textarea { width: 100%; padding: 12px 16px; border: 1px solid #e2e8f0; border-radius: 8px; outline: none; font-family: inherit; transition: var(--transition-smooth); }
+.form-group input:focus, .form-group textarea:focus { border-color: var(--primary-color); box-shadow: 0 0 0 3px rgba(26, 98, 255, 0.1); }
+
+.map-placeholder { height: 300px; background-color: #e2e8f0; border-radius: var(--border-radius); margin-top: 40px; display: flex; flex-direction: column; justify-content: center; align-items: center; color: var(--text-muted); gap: 12px; border: 2px dashed #cbd5e1; }
+.map-placeholder i { font-size: 2.5rem; }
+
+/* --- Footer --- */
+.site-footer { background-color: #0f172a; color: #94a3b8; padding: 80px 0 30px 0; }
+.footer-grid { grid-template-columns: 2fr 1fr 1fr; border-bottom: 1px solid #1e293b; padding-bottom: 50px; }
+.footer-brand h3 { color: var(--white); margin-bottom: 16px; }
+.footer-links h4, .footer-contact h4 { color: var(--white); margin-bottom: 20px; }
+.footer-links ul { list-style: none; }
+.footer-links ul li { margin-bottom: 12px; }
+.footer-links ul li a { color: inherit; text-decoration: none; transition: var(--transition-smooth); }
+.footer-links ul li a:hover { color: var(--white); }
+.social-icons { display: flex; gap: 16px; margin-top: 24px; }
+.social-icons a { width: 40px; height: 40px; background-color: #1e293b; color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: var(--transition-smooth); text-decoration: none; }
+.social-icons a:hover { background-color: var(--primary-color); }
+.footer-bottom { text-align: center; padding-top: 30px; font-size: 0.9rem; }
+
+/* --- Floating WhatsApp Button --- */
+.whatsapp-floating {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: var(--white);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 999;
+    text-decoration: none;
+    transition: var(--transition-smooth);
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-floating:hover { transform: scale(1.1); background-color: #20ba5a; }
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* --- Scroll Animations --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Responsive Media Queries (Mobile First approach adjustment) --- */
+@media (max-width: 968px) {
+    .grid-3, .grid-2, .footer-grid { grid-template-columns: 1fr; }
+    .hero-content h1 { font-size: 2.5rem; }
+    .cta-buttons { flex-direction: column; }
+    
+    .hamburger { display: flex; }
+    .nav-menu {
+        position: absolute;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-color: var(--white);
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 0;
+        transition: var(--transition-smooth);
+        box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+    }
+    .nav-menu.active { left: 0; }
+}
+
+/*MAP PLACEHOLDE EXTERNAL CSS FILE ADDED AFTER THE CODE */
+
+.map-container {
+    margin-top: 50px;
+    margin-bottom: 0px; /* Isko 0px karne se niche ka cut hona band ho jayega */
+    padding: 0 24px;
+    width: 100%;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 450px; /* Height ko thoda bada kiya hai taaki map bada aur clean dikhe */
+    border-radius: 12px;
+    box-shadow: var(--shadow-card);
+    display: block; /* Isse layout break nahi hota */
+}
+/* LOGO STYLING CSS FILE CODE */
+.flex-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Logo aur text ke beech ka gap */
+}
+
+.site-logo {
+    height: 45px; /* Logo ki height manage karne ke liye */
+    width: auto;
+    object-fit: contain;
+}
+
+.logo-icon {
+    font-size: 1.6rem;
+    color: var(--primary-color); /* Premium blue color icon */
+}
+
+/*extra map placehoder code for the size fit on web*/
+/* Live Map Fix Layout */
+.map-container {
+    margin-top: 50px !important;
+    margin-bottom: 30px !important; /* Footer se thoda gap bana dega */
+    padding: 0 24px !important;
+    width: 100% !important;
+    display: block !important;
+    clear: both !important; /* Kisi bhi floating element ko clear karega */
+}
+
+.map-container iframe {
+    width: 100% !important;
+    height: 400px !important; /* height ko sahi balance kiya hai */
+    border-radius: 12px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03) !important;
+}
+
+/*profile custon code */
+
+.profile-photo-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.profile-img {
+    width: 200px; /* Aap size apne hisab se change kar sakte hain */
+    height: 200px;
+    border-radius: 50%; /* Photo ko round (gol) karne ke liye */
+    object-fit: cover; /* Photo stretch nahi hogi */
+    border: 3px solid #007bff; /* Aapki website ki theme ke hisab se border color */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
