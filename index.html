@@ -280,11 +280,11 @@
             <div class="footer-brand">
                 <h3>SAROJ TAX CONSULTANCY</h3>
                 <p>Your trusted partner for taxation, accounting, GST, audit, and business advisory services.</p>
-                <div class="social-icons">
+                <!-- <div class="social-icons">
                     <a href="#"><i class="fa-brands fa-facebook"></i></a>
                     <a href="#"><i class="fa-brands fa-linkedin"></i></a>
                     <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                </div>
+                </div> -->
             </div>
             </section> 
     <div class="map-wrapper reveal">
@@ -326,10 +326,43 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/91-9955271750" class="whatsapp-floating" target="_blank" aria-label="Chat on WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
+  <a href="https://wa.me/919955271750" class="whatsapp-floating" target="_blank" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" width="35" height="35" fill="currentColor">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+    </svg>
+</a>
 
+<!-- 
+AI ASSISTANT CODE EXTRANAL "s4info Assistant" -->
+
+
+<!-- S4 Assistant Chat Widget (Blue & Positioned Above WhatsApp) -->
+<div class="s4-chat-widget">
+    <button class="s4-chat-toggle" id="s4ChatToggle" aria-label="Open S4 Assistant">
+        <i class="fa-solid fa-robot"></i>
+        <span class="s4-badge">AI</span>
+    </button>
+    
+    <div class="s4-chat-box" id="s4ChatBox">
+        <div class="s4-chat-header">
+            <div class="s4-header-info">
+                <i class="fa-solid fa-robot"></i>
+                <div>
+                    <h4>S4 Assistant</h4>
+                    <span>Online | Powered by Gemini</span>
+                </div>
+            </div>
+            <button class="s4-close-btn" id="s4CloseBtn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="s4-chat-messages" id="s4ChatMessages">
+            <div class="s4-message bot">Hello! I am S4 Assistant. How can I help you with tax, GST, or accounting services today?</div>
+        </div>
+        <div class="s4-chat-input-area">
+            <input type="text" id="s4UserInput" placeholder="Ask a question..." autocomplete="off">
+            <button id="s4SendBtn"><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+    </div>
+</div>
     <script src="script.js"></script>
 </body>
 </html>
