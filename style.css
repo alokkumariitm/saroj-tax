@@ -525,3 +525,59 @@ external css for the floating whatsapp button  */
     }
 }
 
+/* # this is the extrenal css for the addrex solution footer button  */
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.addrex-credit-box {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    background: rgba(255, 107, 0, 0.05);
+    padding: 6px 14px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 107, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.addrex-credit-box:hover {
+    background: rgba(255, 107, 0, 0.1);
+    border-color: #ff6b00;
+    transform: translateY(-2px);
+}
+
+.code-icon {
+    color: #ff6b00;
+    font-weight: bold;
+}
+
+/* AddreX Solution text ko orange color dene ke liye */
+.brand-name {
+    color: #ff6b00;
+    font-weight: 700;
+}
+
+/* Animated Click Hand Style & Animation */
+.click-hand {
+    display: inline-block;
+    font-size: 16px;
+    animation: clickBounce 1.2s infinite ease-in-out;
+}
+
+@keyframes clickBounce {
+    0%, 100% {
+        transform: translateX(0) scale(1);
+    }
+    50% {
+        transform: translateX(6px) scale(1.15);
+    }
+}
